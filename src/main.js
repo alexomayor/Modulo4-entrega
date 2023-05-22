@@ -1,3 +1,5 @@
+// import "./style.css";
+
 console.log("Hello Typescript!");
 
 function SetNumberFunction() {

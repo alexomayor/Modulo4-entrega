@@ -3,13 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="./src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
+    <script src="/src/main.ts"></script>
+    <!-- <script>
+    function SetNumberfunction() {
+      let CurrentNumber = document.getElementById("CurrentNumberF");
+      let ChooseNumber = document.getElementById("ChosenNumber");
+    
+      CurrentNumber.innerHTML = ChooseNumber?.value;
+    }</script> -->
   </head>
   <body>
-    <div id="app">
-      <h1>TypeScript Sandbox</h1>
+    <div class="DisplayTurn">
+      <h1 class="CurrentNumber">
+        <label id="CurrentNumberF">001</label>
+      </h1>
+      <p class="texto-turno">
+        <strong> Por favor, acérquese al mostrador</strong>
+      </p>
+
+      <div class="ButtonContainer">
+        <button
+          type="Button"
+          alt="Next Button"
+          class="ButtonTurn ButtonNext"
+          onclick="IncreaseNumberFunction()"
+        >
+          Next
+        </button>
+        <button
+          type="Button"
+          alt="Previous Button"
+          class="ButtonTurn ButtonPrevious"
+          onclick="DecreaseNumberFunction()"
+        >
+          Previous
+        </button>
+        <button
+          type="Button"
+          alt="Reset Button"
+          class="ButtonTurn ButtonReset"
+          onclick="ResetNumberFunction()"
+        >
+          Reset
+        </button>
+      </div>
     </div>
-    <script type="module" src="/src/main.ts"></script>
+
+    <label>Introducir turno: </label>
+
+    <input
+      min="1"
+      max="999"
+      title="boton"
+      placeholder="insert number"
+      type="number"
+      id="ChosenNumber"
+    />
+
+    <button onclick="SetNumberFunction()" id="SetNumber">Actualizar</button>
+
+    <div id="resultado"></div>
   </body>
 </html>
