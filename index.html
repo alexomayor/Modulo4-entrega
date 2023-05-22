@@ -7,63 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
     <script src="/src/main.ts"></script>
-    <!-- <script>
-    function SetNumberfunction() {
-      let CurrentNumber = document.getElementById("CurrentNumberF");
-      let ChooseNumber = document.getElementById("ChosenNumber");
-    
-      CurrentNumber.innerHTML = ChooseNumber?.value;
-    }</script> -->
   </head>
   <body>
-    <div class="DisplayTurn">
-      <h1 class="CurrentNumber">
-        <label id="CurrentNumberF">001</label>
+    <div class="displayTurn">
+      <h1 class="currentNumber">
+        <label id="currentNumberF">001</label>
       </h1>
       <p class="texto-turno">
         <strong> Por favor, acérquese al mostrador</strong>
       </p>
-
-      <div class="ButtonContainer">
-        <button
-          type="Button"
-          alt="Next Button"
-          class="ButtonTurn ButtonNext"
-          onclick="IncreaseNumberFunction()"
-        >
-          Next
-        </button>
+    </div>
+    <div class="buttonContainer">
+      <div class="mainButtons">
         <button
           type="Button"
           alt="Previous Button"
-          class="ButtonTurn ButtonPrevious"
+          class="buttonTurn buttonPrevious buttonTurnClick"
           onclick="DecreaseNumberFunction()"
         >
           Previous
         </button>
         <button
           type="Button"
+          alt="Next Button"
+          class="buttonTurn buttonNext buttonTurnClick"
+          onclick="IncreaseNumberFunction()"
+        >
+          Next
+        </button>
+      </div>
+      <div class="altButtons">
+        <button
+          type="Button"
           alt="Reset Button"
-          class="ButtonTurn ButtonReset"
+          class="buttonTurn buttonReset buttonTurnClick"
           onclick="ResetNumberFunction()"
         >
           Reset
         </button>
+        <div class="buttonTurn setNumberDiv">
+          <label>Actualizar al turno: </label>
+
+          <input
+            min="1"
+            max="999"
+            title="boton"
+            placeholder="insert number"
+            type="number"
+            id="chosenNumber"
+          />
+          <button
+            onclick="SetNumberFunction()"
+            class="buttonTurn buttonTurnClick"
+            id="SetNumber"
+          >
+            Actualizar
+          </button>
+        </div>
       </div>
     </div>
-
-    <label>Introducir turno: </label>
-
-    <input
-      min="1"
-      max="999"
-      title="boton"
-      placeholder="insert number"
-      type="number"
-      id="ChosenNumber"
-    />
-
-    <button onclick="SetNumberFunction()" id="SetNumber">Actualizar</button>
 
     <div id="resultado"></div>
   </body>
