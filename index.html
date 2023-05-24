@@ -11,9 +11,9 @@
   <body>
     <div class="displayTurn">
       <h1 class="currentNumber">
-        <label id="currentNumberF">001</label>
+        <div type="number" id="currentNumberF">1</div>
       </h1>
-      <p class="texto-turno">
+      <p class="textoTurno">
         <strong> Por favor, acérquese al mostrador</strong>
       </p>
     </div>
@@ -23,7 +23,7 @@
           type="Button"
           alt="Previous Button"
           class="buttonTurn buttonPrevious buttonTurnClick"
-          onclick="DecreaseNumberFunction()"
+          onclick="decreaseNumberFunction()"
         >
           Previous
         </button>
@@ -31,7 +31,7 @@
           type="Button"
           alt="Next Button"
           class="buttonTurn buttonNext buttonTurnClick"
-          onclick="IncreaseNumberFunction()"
+          onclick="increaseNumberFunction()"
         >
           Next
         </button>
@@ -41,7 +41,7 @@
           type="Button"
           alt="Reset Button"
           class="buttonTurn buttonReset buttonTurnClick"
-          onclick="ResetNumberFunction()"
+          onclick="resetNumberFunction()"
         >
           Reset
         </button>
@@ -57,9 +57,9 @@
             id="chosenNumber"
           />
           <button
-            onclick="SetNumberFunction()"
+            onclick="setNumberFunction()"
             class="buttonTurn buttonTurnClick"
-            id="SetNumber"
+            id="setNumber"
           >
             Actualizar
           </button>

@@ -2,45 +2,35 @@
 
 console.log("Hello Typescript!");
 
-function SetNumberFunction() {
-  let CurrentNumber = document.getElementById("currentNumberF");
-  let ChooseNumber = document.getElementById("chosenNumber");
+function setNumberFunction() {
+  let currentNumber = document.getElementById("currentNumberF");
+  let chooseNumber = document.getElementById("chosenNumber");
   if (
-    Number.isInteger(ChooseNumber.valueAsNumber) &&
-    ChooseNumber.valueAsNumber >= 1 &&
-    ChooseNumber.valueAsNumber <= 999
+    Number.isInteger(chooseNumber.valueAsNumber) &&
+    chooseNumber.valueAsNumber >= 1 &&
+    chooseNumber.valueAsNumber <= 99
   ) {
     console.log("HOla");
-    CurrentNumber.innerHTML = pad(ChooseNumber.valueAsNumber, 3);
+    currentNumber.innerHTML = chooseNumber.valueAsNumber;
   }
 }
 
-function IncreaseNumberFunction() {
-  let CurrentNumber = document.getElementById("currentNumberF");
-  CurrentNumber.innerHTML = pad(Number(CurrentNumber.innerHTML) + 1, 3);
-  if (CurrentNumber.innerHTML > 999) {
-    CurrentNumber.innerHTML = pad(1, 3);
+function increaseNumberFunction() {
+  let currentNumber = document.getElementById("currentNumberF");
+  currentNumber.innerHTML = Number(currentNumber.innerHTML) + 1;
+  if (currentNumber.innerHTML > 99) {
+    currentNumber.innerHTML = 1;
   }
 }
-function DecreaseNumberFunction() {
-  let CurrentNumber = document.getElementById("currentNumberF");
-  CurrentNumber.innerHTML = pad(Number(CurrentNumber.innerHTML) - 1, 3);
-  if (CurrentNumber.innerHTML < 1) {
-    CurrentNumber.innerHTML = pad(999, 3);
+function decreaseNumberFunction() {
+  let currentNumber = document.getElementById("currentNumberF");
+  currentNumber.innerHTML = Number(currentNumber.innerHTML) - 1;
+  if (currentNumber.innerHTML < 1) {
+    currentNumber.innerHTML = 99;
   }
 }
 
-function ResetNumberFunction() {
-  let CurrentNumber = document.getElementById("currentNumberF");
-  CurrentNumber.innerHTML = pad(1, 3);
-}
-
-function pad(n, length) {
-  var len = length - ("" + n).length;
-  // return (len > 0 ? new Array(++len).join("0") : "") + n;
-  if (len > 0) {
-    return new Array(++len).join("0") + n;
-  } else {
-    return "";
-  }
+function resetNumberFunction() {
+  let currentNumber = document.getElementById("currentNumberF");
+  currentNumber.innerHTML = 1;
 }
